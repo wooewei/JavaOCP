@@ -23,6 +23,7 @@ public class SetDemo5 {
 		}
 		System.out.println("總花費金額:"+total);
 		//-----------------------------------------------
+		//-----------------------------------------------
 		int total2 = gifts.stream()
 						  .filter(gift -> gift.getPrice()!= null)	
 						   //.mapToInt(gift -> gift.getPrice()).sum();
