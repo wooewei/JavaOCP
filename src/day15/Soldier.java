@@ -3,19 +3,23 @@ package day15;
 import java.util.Objects;
 
 public class Soldier {
-	private String level;   // 二等兵, 一等兵, 上兵, 下士, 中士, 上士, 三等士官長, 二等士官長, 一等士官長
+	private Level level;   // 二等兵, 一等兵, 上兵, 下士, 中士, 上士, 三等士官長, 二等士官長, 一等士官長
 	private Integer salary; // 4500  5000  6000  9000
 	
-	public Soldier(String level, Integer salary) {
+	public Soldier() {
+	
+	}
+
+	public Soldier(Level level, Integer salary) {
 		this.level = level;
 		this.salary = salary;
 	}
 
-	public String getLevel() {
+	public Level getLevel() {
 		return level;
 	}
 
-	public void setLevel(String level) {
+	public void setLevel(Level level) {
 		this.level = level;
 	}
 
@@ -41,7 +45,7 @@ public class Soldier {
 		if (getClass() != obj.getClass())
 			return false;
 		Soldier other = (Soldier) obj;
-		return Objects.equals(level, other.level) && Objects.equals(salary, other.salary);
+		return level == other.level && Objects.equals(salary, other.salary);
 	}
 
 	@Override
@@ -49,7 +53,6 @@ public class Soldier {
 		return "Soldier [level=" + level + ", salary=" + salary + "]";
 	}
 	
-	
-	
-	
 }
+	
+	
