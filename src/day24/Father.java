@@ -1,6 +1,6 @@
 package day24;
 
-public class Father extends Thread{
+public class Father extends Thread {
 
 	@Override
 	public void run() {
@@ -21,8 +21,6 @@ public class Father extends Thread{
 		System.out.println("爸爸開始洗熱水澡");
 		System.out.println("爸爸洗完澡了");
 		
-		
 	}
 	
-
 }
