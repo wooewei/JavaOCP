@@ -7,7 +7,9 @@ public class CarDemo {
 	public static void main(String[] args) {
 		int n = 4;
 		Runnable eat = ()-> {
-			System.out.println("吃台中肉圓");
+			// 執行eat 程式的執行緒
+			String tName = Thread.currentThread().getName();
+			System.out.printf("吃台中肉圓! %s 付款\n",tName);
 		};
 		CyclicBarrier cb = new CyclicBarrier(n,eat);
 		
@@ -15,7 +17,7 @@ public class CarDemo {
 				new Car(cb,"小鄧"),
 				new Car(cb,"老邱"),
 				new Car(cb,"小林"),
-				new Car(cb,"老黃")
+				new Car(cb,"小黃")
 				
 		};
 
